@@ -139,10 +139,14 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, index){
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === index){
+      array.splice(i, 1);
+    }
+  }return array;
 }
-
+console.log(removeFlavorByName(originalFlavors, "Coffee Candy"));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -165,10 +169,16 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, language){
+  const filteredArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].includes(language)){
+      filteredArray.push(array[i]);
+    }
+  }return filteredArray;
 }
 
+console.log(filterByWord(originalFlavors, "Chocolate"));
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -182,7 +192,7 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(originalFlavors){
   /*code here*/
 }
 
